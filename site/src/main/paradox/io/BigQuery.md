@@ -312,7 +312,7 @@ Scio provides extension methods on `ScioContext` that derive `TableRowType[T]` i
 - @scaladoc[typedBigQueryTable](com.spotify.scio.bigquery.syntax.MagnolifyBigQueryScioContextOps#typedBigQueryTable[T](table:com.spotify.scio.bigquery.Table)(implicitevidence$3:magnolify.bigquery.TableRowType[T],implicitevidence$4:com.spotify.scio.coders.Coder[T]):com.spotify.scio.values.SCollection[T]): Reads an `SCollection[T]` from a table specification.
 - @scaladoc[typedBigQueryStorageMagnolify](com.spotify.scio.bigquery.syntax.MagnolifyBigQueryScioContextOps#typedBigQueryStorageMagnolify[T](table:com.spotify.scio.bigquery.Table,selectedFields:List[String],rowRestriction:String)(implicitevidence$5:magnolify.bigquery.TableRowType[T],implicitevidence$6:com.spotify.scio.coders.Coder[T]):com.spotify.scio.values.SCollection[T]): Reads an `SCollection[T]` using the BigQuery Storage API.
 
-```scala
+```scala mdoc:compile-only
 import com.spotify.scio._
 import com.spotify.scio.bigquery._
 
@@ -342,7 +342,7 @@ def main(cmdlineArgs: Array[String]): Unit = {
 
 Write an `SCollection[T]` of case classes to BigQuery using @scaladoc[saveAsBigQueryTable](com.spotify.scio.bigquery.syntax.MagnolifyBigQuerySCollectionOps#saveAsBigQueryTable(table:com.spotify.scio.bigquery.Table,timePartitioning:com.spotify.scio.bigquery.TimePartitioning,clustering:com.spotify.scio.bigquery.Clustering,writeDisposition:org.apache.beam.sdk.io.gcp.bigquery.BigQueryIO.Write.WriteDisposition,createDisposition:org.apache.beam.sdk.io.gcp.bigquery.BigQueryIO.Write.CreateDisposition,tableDescription:String,method:org.apache.beam.sdk.io.gcp.bigquery.BigQueryIO.Write.Method,triggeringFrequency:org.joda.time.Duration,sharding:com.spotify.scio.bigquery.Sharding,failedInsertRetryPolicy:org.apache.beam.sdk.io.gcp.bigquery.InsertRetryPolicy,extendedErrorInfo:Boolean,successfulInsertsPropagation:Boolean)(implicitcoder:com.spotify.scio.coders.Coder[T],implicittableRowType:magnolify.bigquery.TableRowType[T]):com.spotify.scio.io.ClosedTap[T]):
 
-```scala
+```scala mdoc:compile-only
 import com.spotify.scio.values.SCollection
 import com.spotify.scio.bigquery._
 
